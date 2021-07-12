@@ -1,0 +1,94 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color justify-content-between">
+    <mdb-navbar-brand>
+        <a class="navbar-brand" style="color: white;" (click)="home()"><mdb-icon fas icon="home" mdbDropdownToggle></mdb-icon></a>
+        <a class="navbar-brand" href="">Credit Control System</a>
+    </mdb-navbar-brand>
+    <links>
+        <form class="form-inline waves-light waves-light ml-auto" mdbWavesEffect>
+        <div class="md-form my-0">
+            
+            <button mdbBtn color="warning" outline="true" size="sm" class="my-0 waves-light" type="submit" mdbWavesEffect><mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>  {{sessionValue}}| {{declared.Email}} </button>
+            <a class="navbar-brand" style="color: white;" (click)="signout()">Sign Out <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon></a>
+        </div>
+        </form>
+    </links>
+</mdb-navbar>
+<div class="b">
+
+   
+    <div>
+       
+    
+    
+    
+    <h4 class="h">Eplore the World </h4>
+    <br>
+    <div class="maindiv">
+        
+        <div class="left">
+            <h6>Change Password</h6>
+            <button class="ap" (click)="claims()" ><mdb-icon fas icon="file-invoice" mdbDropdownToggle></mdb-icon> Claims</button>
+            <hr>
+            <button class="ap" (click)="aging()" ><mdb-icon fas icon="file-invoice-dollar" mdbDropdownToggle></mdb-icon>  Invoice Aging</button>
+            <hr> <button class="ap" (click)="cp()" ><mdb-icon fas icon="key" mdbDropdownToggle></mdb-icon>  Change Password</button>
+            <hr>
+            
+            
+    
+        </div>
+        <div class="center"><div class="card-body">
+            <h3>Debts Settled</h3>
+            <div class="card richy example-1 scrollbar-ripe-malinka bordered-deep-purple thin">
+                  <div *ngFor="let data of in">
+                      <p>Invoice Number:{{data.InvoiceNumber}} | Date :{{data.Invoicedate | date:'dd-MM-yyyy'}}</p>
+          <p><code>Due Date: {{data.DueDate | date:'dd-MM-yyyy'}}</code></p>
+          <h6>CUSTOMER DETAILS</h6>
+          <p>Name :{{data.Name}} <br>
+        Contact Number : {{data.PhoneNumber}}</p>
+             
+              
+         
+            <table class="table table-striped w-auto">
+                <thead>
+                <tr>
+                    <th>Driver's Name</th>
+                    <th>Driver's Contact Number</th>
+                    <th>Comment</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>{{data.Driver}}</td>
+                    <td>{{data.DriverPhoneNumber}}</td>
+                    <td>{{data.Comment}}</td>			
+           
+                </tr>
+            </table>
+           
+            <br ><br>
+            <p style="text-align: center;"><code >---end of invoice---</code></p>
+            <hr>
+            <br>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+        <div class="right">
+            <h6>Make a request</h6>
+            <button class=" ap" (click)="at()" ><mdb-icon fas icon="tasks" mdbDropdownToggle></mdb-icon>  Assigned Tasks</button>
+            <hr>
+            <button class="aactive" (click)="ds()" ><mdb-icon fas icon="file-invoice-dollar" mdbDropdownToggle></mdb-icon>  Debts Settled</button><hr>
+            <button class="ap" (click)="ai()" ><mdb-icon fas icon="file-invoice" mdbDropdownToggle></mdb-icon>  Add Invoice</button><hr>
+            <button class="ap" (click)="nu()" ><mdb-icon fas icon="user-plus" mdbDropdownToggle></mdb-icon>  New User </button>
+            <hr>
+    
+            
+    
+        </div>
+        
+    </div>
+    </div>
+    <div class="footer">
+        <p class="h ah">All rights Reserved @2020</p>
+        <p class="h">let's go digital</p>
+    </div>

@@ -1,0 +1,48 @@
+<div style="background-color: aliceblue;">
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <img style="width: 100px;height: 100px; margin-left: 35%;" src="./assets/img/favicon.png">
+       
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+          <!-- Default form contact -->
+
+
+          <form class="text-center border border-light p-5" #userLogin="ngForm" (ngSubmit)="onSubmit()">
+
+    <p class="h4 mb-4">Contact us</p>
+
+  
+    <!-- Email -->
+    <input type="email"  id="defaultContactFormEmail" mdbInput
+      class="form-control mb-4" name="Email" [(ngModel)]="declared.Email" placeholder="E-mail">
+  
+         <!-- Password -->
+    <input type="password"  id="defaultContactFormPassword" mdbInput
+    class="form-control mb-4" name="Password" [(ngModel)]="declared.Password" placeholder="Password">
+
+  
+    <!-- Copy -->
+    <mdb-checkbox [default]="true" class="mb-4">Remember me</mdb-checkbox>
+  
+    <!-- Send button -->
+    <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+      mdbWavesEffect type="submit" >Send</button>
+  
+  </form>
+  <!-- Default form contact -->
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <br> <br> <br> <br>
+</div>

@@ -1,0 +1,133 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color justify-content-between">
+    <mdb-navbar-brand>
+        <a class="navbar-brand rc" style="color: white;" (click)="home()"><mdb-icon fas icon="home" mdbDropdownToggle></mdb-icon></a>
+        <a class="navbar-brand" href="">Credit Control System</a>
+    </mdb-navbar-brand>
+    <links>
+        <form class="form-inline waves-light waves-light ml-auto" mdbWavesEffect>
+        <div class="md-form my-0">
+            
+            <button mdbBtn color="warning" outline="true" size="sm" class="my-0 waves-light" type="submit" mdbWavesEffect><mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>  {{sessionValue}}| {{declared.Email}} </button>
+            <a class="navbar-brand rc" style="color: white;" (click)="signout()">Sign Out <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon></a>
+        </div>
+        </form>
+    </links>
+</mdb-navbar>
+<div class="b">
+
+   
+    <div>
+       
+    
+    
+    
+    <h4 class="h">Summary Sheet </h4>
+    <br>
+    <div class="maindiv">
+        
+        <div class="left">
+      
+     
+        </div>
+        <div class="center"><div class="card-body">
+            <h3>Summary Invoices</h3>
+            <div class="card richy example-1 scrollbar-ripe-malinka bordered-deep-purple thin">
+                <table id="tableSortExample"hover="true" striped="true"small="true" mdbTable class="z-depth-1">
+                    <thead>
+                      <tr>
+                        <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{head | titlecase}}
+                          <mdb-icon fas icon="sort"></mdb-icon>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let el of in; let i = index">
+                        <th scope="row">{{el.InvoiceNumber}}</th>
+                        <td>{{el.Name}}</td>
+                        <td>{{el.PhoneNumber}}</td>
+                        <td>{{el.Driver}}</td>
+                        <td>{{el.DriverPhoneNumber}}</td>
+                        <td>{{claim(el.Claim)}}</td>
+                        <td>{{amount(el.Amount, el.DAmount)}}</td>
+                        <td><button type="button" class="btn btn-primary">{{calculateDiff(el.DueDate,el.Invoicedate,el.Paid)}}</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+        </div>
+    </div>
+    
+        </div>
+        <div class="right">
+            <button class="ap" (click)="home()" ><mdb-icon fas icon="home" mdbDropdownToggle></mdb-icon></button>
+        
+        </div>
+        
+    </div>
+    </div>
+    <div class="footer">
+        <p class="h ah">All rights Reserved @2020</p>
+        <p class="h">let's go digital</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color justify-content-between">
+  <mdb-navbar-brand>
+      <a class="navbar-brand" style="color: white;" (click)="home()"><mdb-icon fas icon="home" mdbDropdownToggle></mdb-icon></a>
+      <a class="navbar-brand" href="">Credit Control System</a>
+  </mdb-navbar-brand>
+  <links>
+      <form class="form-inline waves-light waves-light ml-auto" mdbWavesEffect>
+      <div class="md-form my-0">
+          
+          <button mdbBtn color="warning" outline="true" size="sm" class="my-0 waves-light" mdbWavesEffect><mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>  {{sessionValue}}| {{declared.Email}} </button>
+          <a class="navbar-brand" style="color: white;" (click)="signout()">Sign Out <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon></a>
+      </div>
+      </form>
+  </links>
+</mdb-navbar>
+<div class="b">
+       
+     
+    
+    
+    <h4 class="h">Eplore the World </h4>
+    <br>
+    <div class="maindiv">
+        
+        <div class="left">
+          <h6>Change Password</h6>
+          <button class="ap" (click)="claims()" ><mdb-icon fas icon="file-invoice" mdbDropdownToggle></mdb-icon> Claims</button>
+          <hr>
+          <button class="ap" (click)="aging()" ><mdb-icon fas icon="file-invoice-dollar" mdbDropdownToggle></mdb-icon>  Invoice Aging</button>
+          <hr> <button class="ap" (click)="cp()" ><mdb-icon fas icon="key" mdbDropdownToggle></mdb-icon>  Change Password</button>
+          <hr>
+            
+            
+    
+        </div>
+        <div class="center">
+            <div class="card-body" >
+            <h3>New Invoice</h3>
+            <form class="text-center" style="color: #757575; " #userLogin="ngForm" (ngSubmit)="onClickChange()" >
+                <div class="md-form">
+                    <input type="text" name="Name" id="materialLoginFormCurrentName" [(ngModel)]="declared.Name"  class="form-control" mdbInput>
+                    <label for="materialLoginFormCurrentName">Full Name</label>
+                  </div>
+                  <!-- Email -->
+                  <div class="md-form">
+                    <input type="number" name="Surname" id="inu" [(ngModel)]="declared.InvoiceNumber"  class="form-control" mdbInput>
+                    <label for="inu">Invoice Number</label>
+                  </div>
+                
+                <div class="md-form">
+                   <input type="date" name="InvoiceDate" id="idd" [(ngModel)]="declared.InvoiceDate"  class="form-control" mdbInput>
+                   <label for="idd">Invoice date</label>
+                 </div>
+                 <div class="md-form">
+                    <input type="date" name="DueDate" id="iddd" [(ngModel)]="declared.DueDate"  class="form-control" mdbInput>
+                    <label for="iddd">Due date</label>
+                  </div>
+                  <div class="md-form">
+                    <input type="number" name="Amount" id="idds" [(ngModel)]="declared.Amount"  class="form-control" mdbInput>
+                    <label for="idds">Amount in $</label>
+                  </div>
+                  <div class="md-form">
+                    <input type="text" name="PhoneNumber" id="iddn" [(ngModel)]="declared.PhoneNumber"  class="form-control" mdbInput>
+                    <label for="iddn">Phone number</label>
+                  </div>
+
+                  <h4>Driver's Information</h4>
+                  <div class="md-form">
+                    <input type="text" name="Driver" id="materialLoginFormCurrentName" [(ngModel)]="declared.Driver"  class="form-control" mdbInput>
+                    <label for="materialLoginFormCurrentName">Driver's full Name</label>
+                  </div>
+                  <div class="md-form">
+                    <input type="text" name="DriverPhoneNumber" id="DriverPhoneNumber" [(ngModel)]="declared.DriverPhoneNumber"  class="form-control" mdbInput>
+                    <label for="DriverPhoneNumber">Driver's Contact Number</label>
+                  </div>
+                
+           
+                 <!-- Sign in button -->
+                 <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                   type="submit">Submit</button>
+           
+           
+               </form>
+    </div>
+    
+        </div>
+        <div class="right">
+            <h6>Make a request</h6>
+            <button class=" ap" (click)="at()" ><mdb-icon fas icon="tasks" mdbDropdownToggle></mdb-icon>  Assigned Tasks</button>
+            <hr>
+            <button class="ap" (click)="ds()" ><mdb-icon fas icon="file-invoice-dollar" mdbDropdownToggle></mdb-icon>  Debts Settled</button><hr>
+            <button class="aactive" (click)="ai()" ><mdb-icon fas icon="file-invoice" mdbDropdownToggle></mdb-icon>  Add Invoice</button><hr>
+            <button class="ap" (click)="nu()" ><mdb-icon fas icon="user-plus" mdbDropdownToggle></mdb-icon>  New User </button>
+            <hr>
+    
+            
+    
+        </div>
+        
+    </div>
+    </div>
+  

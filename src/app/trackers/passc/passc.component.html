@@ -1,0 +1,80 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color justify-content-between">
+    <mdb-navbar-brand>
+        <a class="navbar-brand rc" style="color: white;" (click)="trackers()"><mdb-icon fas icon="home" mdbDropdownToggle></mdb-icon></a>
+        <a class="navbar-brand" href="">Credit Control System</a>
+    </mdb-navbar-brand>
+    <links>
+        <form class="form-inline waves-light waves-light ml-auto" mdbWavesEffect>
+        <div class="md-form my-0">
+            
+            <button mdbBtn color="warning" outline="true" size="sm" class="my-0 waves-light" type="submit" mdbWavesEffect><mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>  {{sessionValue}} </button>
+            <a class="navbar-brand rc" style="color: white;" (click)="signout()">Sign Out <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon></a>
+        </div>
+        </form>
+    </links>
+</mdb-navbar>
+<div class="b">
+
+   
+    <div>
+       
+    
+    
+    
+    <h4 class="h">Eplore the World </h4>
+    <br>
+    <div class="maindiv">
+        
+        <div class="left">
+            <h6>Change Password</h6>
+            <button class="aactive" (click)="cp()" ><mdb-icon fas icon="key" mdbDropdownToggle></mdb-icon>  Change Password</button>
+            <hr>
+            
+            
+     
+        </div>
+        <div class="center">
+            <div style="background-color: #6ea9b863; padding: 10%;border-radius: 10px;">
+            <form class="text-center" style="color: #757575; " #userLogin="ngForm" (click)="onClickChange()" >
+                <div class="md-form">
+                   <input type="password" name="CPassword" id="materialLoginFormCPassword" [(ngModel)]="declared.CPassword"  class="form-control" mdbInput>
+                   <label for="materialLoginFormCPassword">Current Password</label>
+                 </div>
+                 <!-- Email  -->
+                 <div class="md-form">
+                   <input type="password" name="NPassword" id="materialLoginFormCurrentNpassword" [(ngModel)]="declared.NPassword"  class="form-control" mdbInput>
+                   <label for="materialLoginFormCurrentNpassword">New Password</label>
+                 </div>
+           
+                 <!-- Password -->
+                 <div class="md-form">
+                   <input type="password" id="materialLoginFormConpassword" name="ConPassword" [(ngModel)]="declared.ConPassword"  class="form-control" mdbInput>
+                   <label for="materialLoginFormConpassword">Confirm New-Password</label>
+                 </div>
+           
+                 <!-- Sign in button -->
+                 <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                   type="submit">Change</button>
+           
+           
+               </form>
+               </div>
+    
+        </div>
+        <div class="right">
+            <h6>Make a request</h6>
+            <button class="ap" (click)="trackers()" ><mdb-icon fas icon="tasks" mdbDropdownToggle></mdb-icon>  Assigned Tasks</button>
+            <hr>
+            <button class="ap" (click)="sdebt()" ><mdb-icon fas icon="file-invoice-dollar" mdbDropdownToggle></mdb-icon>  Debts Settled</button><hr>
+            <hr>
+    
+            
+    
+        </div>
+        
+    </div>
+    </div>
+    <div class="footer">
+        <p class="h ah">All rights Reserved @2020</p>
+        <p class="h">let's go digital</p>
+    </div>
